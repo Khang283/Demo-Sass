@@ -1,0 +1,103 @@
+$kethua: inherit;
+$maunau: #6d0b15;
+$maudonhat: salmon;
+$mauxam: rgb(228,213,213);
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	background-color: $maunau;
+	padding: 1em 2em;
+	width: 96%;
+	z-index: 100;
+	top: 0;
+}
+
+.option {
+	float: right;
+	display: flex;
+	align-items: center;
+}
+
+.control {
+	display: flex;
+}
+
+.nav-bar {
+	display: flex;
+	align-items: center;
+	padding-left: 1em;
+	.nav-items {
+		padding-left: 1em;
+	}
+}
+
+.sign {
+	margin-left: 1.5em;
+	display: flex;
+}
+
+.sign-items {
+	padding: 0 1em;
+	text-decoration: none;
+	&::after {
+		content: " ";
+		display: block;
+		height: 3px;
+		background-color: $maudonhat;
+		margin-top: 2px;
+		transform: scale(0);
+		transition: all 0.5s;
+	}
+	&:hover {
+		&::after {
+			transform: scale(1);
+		}
+	}
+}
+
+.sign-items+ {
+	.sign-items {
+		border-left: solid 1px;
+	}
+}
+
+.nav-items {
+	text-decoration: none;
+	&::after {
+		content: " ";
+		display: block;
+		height: 3px;
+		background-color: $maudonhat;
+		margin-top: 2px;
+		transform: scale(0);
+		transition: all 0.5s;
+	}
+	&:hover {
+		&::after {
+			transform: scale(1);
+		}
+	}
+}
+
+option {
+	font-weight: bold;
+}
+
+select {
+	background: none;
+	border: none;
+	color: $kethua;
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.main-content {
+	position: relative;
+	color: $mauxam;
+	height: 650px;
+	margin: 0em;
+}

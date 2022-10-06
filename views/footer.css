@@ -1,0 +1,40 @@
+footer {
+  position: relative;
+  bottom: -50px;
+  background-color: white;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  position: relative; }
+  footer .contact {
+    position: absolute;
+    display: flex;
+    bottom: 20%;
+    right: 5%; }
+
+.sponsor {
+  display: flex;
+  margin: auto;
+  align-items: center; }
+  .sponsor div img {
+    width: 100px;
+    margin: 0 1em;
+    opacity: 0.5; }
+
+.contact-items {
+  font-size: 20px;
+  color: black;
+  font-weight: bold;
+  box-sizing: border-box;
+  width: 40px;
+  height: 40px;
+  padding: 1em;
+  border: solid 3px black;
+  border-radius: 50%;
+  position: relative;
+  margin: 0 0.5em;
+  transition: 0.7s; }
+  .contact-items:hover {
+    cursor: pointer;
+    background-color: black;
+    color: white; }

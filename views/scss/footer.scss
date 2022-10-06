@@ -1,0 +1,51 @@
+$mautrang: rgba(255, 255, 255, 1);
+$mauden: black;
+
+footer {
+	position: relative;
+	bottom: -50px;
+	background-color: $mautrang;
+	display: flex;
+	padding: 0;
+	margin: 0;
+	position: relative;
+	.contact {
+		position: absolute;
+		display: flex;
+		bottom: 20%;
+		right: 5%;
+	}
+}
+
+.sponsor {
+	div {
+		img {
+			width: 100px;
+			margin: 0 1em;
+			opacity: 0.5;
+		}
+	}
+	display: flex;
+	margin: auto;
+	align-items: center;
+}
+
+.contact-items {
+	font-size: 20px;
+	color: $mauden;
+	font-weight: bold;
+	box-sizing: border-box;
+	width: 40px;
+	height: 40px;
+	padding: 1em;
+	border: solid 3px rgb(0, 0, 0);
+	border-radius: 50%;
+	position: relative;
+	margin: 0 0.5em;
+	transition: 0.7s;
+	&:hover {
+		cursor: pointer;
+		background-color: $mauden;
+		color: $mautrang;
+	}
+}
