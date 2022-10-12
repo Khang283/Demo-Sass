@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 $red: red;
 $blue: blue;
 
@@ -8,3 +9,6 @@ h1 {
 #p1{
     color: $blue;
 }
+=======
+@import './header.scss', './content.scss', './footer.scss'
+>>>>>>> scss

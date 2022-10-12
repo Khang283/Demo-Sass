@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use strict";
 /*Close and open the information large window*/
 let btn_sir = document.querySelector(".button-sir");
@@ -311,3 +312,22 @@ function  deletingtitle(){
   for(let p of dat) p.classList.add('hidden');
 }
 
+=======
+
+let first = document.querySelector('.first');
+function radio1(){
+    first.classList.add('radio1');
+    first.classList.remove('radio2');
+first.classList.remove('radio3');
+};
+function radio2(){
+    first.classList.add('radio2');
+    first.classList.remove('radio1');
+first.classList.remove('radio3');
+};function radio3(){
+    first.classList.add('radio3');
+    first.classList.remove('radio2');
+first.classList.remove('radio1');
+};
+
+>>>>>>> scss
