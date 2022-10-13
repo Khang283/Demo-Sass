@@ -6,12 +6,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon --watch views -e html,css,scss,sass index.js",
-    "style": "node-sass --watch ./views/scss/style.scss --output ./views"
+    "style": "node-sass --watch ./views/sass/style.sass --output ./views"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.1"
+    "express": "^4.18.2"
   },
   "devDependencies": {
     "node-sass": "^7.0.3",
