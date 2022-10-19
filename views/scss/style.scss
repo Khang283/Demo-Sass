@@ -8,6 +8,7 @@ $maunau: #6d0b15;
 $maudonhat: salmon;
 $mauxam: rgb(228,213,213);
 $fontcandung: 'Roboto', sans-serif;
+$positionbtnwidth: 200px;
 
 @mixin demo_mixin () {
     margin: 0;
@@ -212,8 +213,8 @@ img {
 }
 
 .position-btn {
-	width: 200px;
-	height: 200px;
+	width: $positionbtnwidth;
+	height: ($positionbtnwidth * 3)/3;
 	background-color: $mauden;
 	border-radius: 10px;
 	margin: 1em;
@@ -226,7 +227,7 @@ img {
 		}
 		.position-number {
 			&::after {
-				width: 40px;
+				width: $positionbtnwidth/5;
 			}
 		}
 	}
