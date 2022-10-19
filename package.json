@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon --watch views -e html,css,scss,sass index.js",
-    "style": "node-sass --watch ./views/sass/style.sass --output ./views"
+    "style": "node-sass --watch ./views/scss/style.scss --output ./views"
   },
   "author": "",
   "license": "ISC",

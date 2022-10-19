@@ -1,45 +1,27 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap");
+@import "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap";
 html {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   box-sizing: inherit;
   text-transform: uppercase;
   font-weight: 500; }
 
-a {
-  text-decoration: none;
-  color: inherit; }
-
-body {
-  margin: 0;
-  padding: 0; }
-
-ul {
-  list-style: none; }
-
-img {
-  width: 30px; }
-
-.main-content {
-  position: relative;
-  color: #e4d5d5;
-  height: 650px;
-  margin: 0em; }
-
 .header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   position: fixed;
-  background-color: #97212D;
+  background-color: #6d0b15;
   padding: 1em 2em;
   width: 96%;
   z-index: 100;
   top: 0; }
 
 .option {
-  float: right; }
+  float: right;
+  display: flex;
+  align-items: center; }
 
 .control {
   display: flex; }
@@ -51,10 +33,6 @@ img {
   .nav-bar .nav-items {
     padding-left: 1em; }
 
-.option {
-  display: flex;
-  align-items: center; }
-
 .sign {
   margin-left: 1.5em;
   display: flex; }
@@ -62,8 +40,6 @@ img {
 .sign-items {
   padding: 0 1em;
   text-decoration: none; }
-  .sign-items .sign-items {
-    border-left: solid 1px; }
   .sign-items::after {
     content: " ";
     display: block;
@@ -74,6 +50,9 @@ img {
     transition: all 0.5s; }
   .sign-items:hover::after {
     transform: scale(1); }
+
+.sign-items + .sign-items {
+  border-left: solid 1px; }
 
 .nav-items {
   text-decoration: none; }
@@ -88,6 +67,9 @@ img {
   .nav-items:hover::after {
     transform: scale(1); }
 
+option {
+  font-weight: bold; }
+
 select {
   background: none;
   border: none;
@@ -95,25 +77,23 @@ select {
   select:hover {
     cursor: pointer; }
 
-option {
-  font-weight: bold; }
-
-footer {
+.main-content {
   position: relative;
-  bottom: -50px;
-  background-color: white;
-  display: flex;
-  padding: 0;
+  color: #e4d5d5;
+  height: 650px;
   margin: 0; }
 
-.sponsor {
-  display: flex;
-  margin: auto;
-  align-items: center; }
-  .sponsor div img {
-    width: 100px;
-    margin: 0 1em;
-    opacity: 0.5; }
+a {
+  text-decoration: none;
+  color: inherit; }
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; }
+
+img {
+  width: 30px; }
 
 .player {
   min-width: 450px;
@@ -121,32 +101,11 @@ footer {
   opacity: 0.5;
   z-index: -1; }
 
-.hidden {
-  display: none; }
-
 .view-content {
   margin: inherit; }
 
-body {
-  overflow-x: hidden; }
-
-#home, #legend, #manager {
-  width: inherit; }
-
-#legend {
-  background-color: #3F3F3F;
-  margin: 0;
-  overflow: hidden;
-  padding: 3em 0; }
-  #legend .role {
-    color: white;
-    position: relative;
-    left: 130px;
-    top: -20px; }
-    #legend .role::after {
-      width: 130px; }
-
 #home {
+  width: inherit;
   background-color: white;
   overflow: hidden;
   width: inherit;
@@ -159,8 +118,8 @@ body {
   position: relative;
   display: flex;
   align-items: flex-start;
-  padding: 0;
   margin: 0;
+  padding: 0;
   overflow: hidden;
   max-height: 665px; }
 
@@ -175,7 +134,7 @@ body {
   font-size: 30px;
   margin-bottom: 2em;
   margin-top: 2em;
-  color: black;
+  color: #000;
   margin-left: -3em; }
   .roler::after {
     display: block;
@@ -192,7 +151,7 @@ body {
 .position-names {
   font-weight: bold;
   font-size: 1.25em;
-  color: black;
+  color: #000;
   border-bottom: solid #d8d8d8 1px; }
 
 .sub-position {
@@ -203,7 +162,7 @@ body {
 .position-btn {
   width: 200px;
   height: 200px;
-  background-color: black;
+  background-color: #000;
   border-radius: 10px;
   margin: 1em;
   position: relative;
@@ -221,6 +180,7 @@ body {
   left: 10%; }
 
 .position-number {
+  color: #e4d5d5;
   font-size: 10px; }
   .position-number::after {
     display: block;
@@ -231,8 +191,9 @@ body {
     transition: 1s; }
 
 .position-name {
-  width: 50%;
-  font-size: 20px; }
+  color: white;
+  font-size: 20px;
+  width: 50%; }
 
 .position-img {
   width: 250px;
@@ -250,12 +211,11 @@ body {
   height: 15px;
   border: solid #ff0808 2px;
   border-radius: 50%;
-  transition: 0.5s; }
+  transition: 0.5s;
+  margin: 0 2em; }
   .btn-radio:hover {
     cursor: pointer;
     background-color: red; }
-  .btn-radio + .btn-radio {
-    margin-left: 2em; }
 
 .radio1 {
   margin-left: 0; }
@@ -266,77 +226,38 @@ body {
 .radio3 {
   margin-left: -50%; }
 
-.radio4 {
-  margin-left: -75%; }
-
-.background {
+i {
   position: absolute;
-  width: 280px;
-  height: 450px;
-  background-color: #bd0b0b;
-  display: flex;
-  border-radius: 10px 0px 0 10px; }
-
-.image {
-  margin: auto;
-  position: absolute;
-  width: 420px;
-  left: -7rem;
-  z-index: 9;
-  bottom: 0; }
-
-.general-text {
-  z-index: 1100 !important; }
-
-.info-text {
-  border-radius: 10px;
-  box-sizing: border-box;
-  padding-top: 0.5em;
-  padding-left: 17em;
-  top: 76px;
-  left: 28%;
-  width: 900px;
-  height: 450px;
-  background-color: white;
-  z-index: 998; }
-
-.info-bar {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  width: 80%;
-  padding-left: 4em; }
-
-.info-items {
-  flex: 1;
-  padding: 0.5em;
-  background-color: #4b4545;
-  transition: all 0.5s;
-  color: white; }
-  .info-items:hover {
-    cursor: pointer;
-    background-color: #d13838; }
-  .info-items + .info-items {
-    border-left: 2px white solid; }
-
-.info-items--background {
-  background-color: red; }
-
-.info-content {
-  padding-left: 2em;
-  z-index: 2000; }
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); }
 
 footer {
-  position: relative; }
+  position: relative;
+  bottom: -50px;
+  background-color: white;
+  display: flex;
+  position: relative;
+  margin: 0;
+  padding: 0; }
   footer .contact {
     position: absolute;
     display: flex;
     bottom: 20%;
     right: 5%; }
 
+.sponsor {
+  display: flex;
+  margin: auto;
+  align-items: center; }
+  .sponsor div img {
+    width: 100px;
+    margin: 0 1em;
+    opacity: 0.5; }
+
 .contact-items {
   font-size: 20px;
-  color: black;
+  color: #000;
   font-weight: bold;
   box-sizing: border-box;
   width: 40px;
@@ -349,11 +270,5 @@ footer {
   transition: 0.7s; }
   .contact-items:hover {
     cursor: pointer;
-    background-color: black;
+    background-color: #000;
     color: white; }
-
-i {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%); }

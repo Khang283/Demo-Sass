@@ -1,31 +1,136 @@
-@import './header.scss', './footer.scss' ;
 @import "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap";
 
-$kethua: inherit;
 $mauden: #000;
 $mautrang: rgba(255, 255, 255,1 );
 $maudo: red;
 $mauxam: rgb(222,222,222);
+$maunau: #6d0b15;
+$maudonhat: salmon;
+$mauxam: rgb(228,213,213);
 $fontcandung: 'Roboto', sans-serif;
 
+@mixin demo_mixin () {
+    margin: 0;
+	padding: 0;
+}
 
 html {
-	margin: 0;
-	padding: 0;
+	@include demo_mixin;
 	font-family: $fontcandung;
 	box-sizing: inherit;
 	text-transform: uppercase;
 	font-weight: 500;
 }
 
+// header
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	background-color: $maunau;
+	padding: 1em 2em;
+	width: 96%;
+	z-index: 100;
+	top: 0;
+}
+
+.option {
+	float: right;
+	display: flex;
+	align-items: center;
+}
+
+.control {
+	display: flex;
+}
+
+.nav-bar {
+	display: flex;
+	align-items: center;
+	padding-left: 1em;
+	.nav-items {
+		padding-left: 1em;
+	}
+}
+
+.sign {
+	margin-left: 1.5em;
+	display: flex;
+}
+
+.sign-items {
+	padding: 0 1em;
+	text-decoration: none;
+	&::after {
+		content: " ";
+		display: block;
+		height: 3px;
+		background-color: $maudonhat;
+		margin-top: 2px;
+		transform: scale(0);
+		transition: all 0.5s;
+	}
+	&:hover {
+		&::after {
+			transform: scale(1);
+		}
+	}
+}
+
+.sign-items+ {
+	.sign-items {
+		border-left: solid 1px;
+	}
+}
+
+.nav-items {
+	text-decoration: none;
+	&::after {
+		content: " ";
+		display: block;
+		height: 3px;
+		background-color: $maudonhat;
+		margin-top: 2px;
+		transform: scale(0);
+		transition: all 0.5s;
+	}
+	&:hover {
+		&::after {
+			transform: scale(1);
+		}
+	}
+}
+
+option {
+	font-weight: bold;
+}
+
+select {
+	background: none;
+	border: none;
+	color: inherit;
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+
+// content
+.main-content {
+	position: relative;
+	color: $mauxam;
+	height: 650px;
+	margin: 0;
+}
+
 a {
 	text-decoration: none;
-	color: $kethua;
+	color: inherit;
 }
 
 body {
-	margin: 0;
-	padding: 0;
+	@include demo_mixin;
 	overflow-x: hidden;
 }
 
@@ -59,8 +164,7 @@ img {
 	position: relative;
 	display: flex;
 	align-items: flex-start;
-	padding: 0;
-	margin: 0;
+	@include demo_mixin;
 	overflow: hidden;
 	max-height: 665px;
 }
@@ -199,4 +303,53 @@ i {
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%,-50%);
+}
+
+// footer
+footer {
+	position: relative;
+	bottom: -50px;
+	background-color: $mautrang;
+	display: flex;
+	position: relative;
+	@include demo_mixin;
+	.contact {
+		position: absolute;
+		display: flex;
+		bottom: 20%;
+		right: 5%;
+	}
+}
+
+.sponsor {
+	div {
+		img {
+			width: 100px;
+			margin: 0 1em;
+			opacity: 0.5;
+		}
+	}
+	display: flex;
+	margin: auto;
+	align-items: center;
+}
+
+.contact-items {
+	font-size: 20px;
+	color: $mauden;
+	font-weight: bold;
+	box-sizing: border-box;
+	width: 40px;
+	height: 40px;
+	padding: 1em;
+	border: solid 3px rgb(0, 0, 0);
+	border-radius: 50%;
+	position: relative;
+	margin: 0 0.5em;
+	transition: 0.7s;
+	&:hover {
+		cursor: pointer;
+		background-color: $mauden;
+		color: $mautrang;
+	}
 }
