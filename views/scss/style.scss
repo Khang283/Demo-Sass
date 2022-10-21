@@ -1,5 +1,7 @@
 @import "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap";
 
+$fontcandung: 'Roboto', sans-serif;
+$positionbtnwidth: 200px;
 $mauden: #000;
 $mautrang: rgba(255, 255, 255,1 );
 $maudo: red;
@@ -7,16 +9,20 @@ $mauxam: rgb(222,222,222);
 $maunau: #6d0b15;
 $maudonhat: salmon;
 $mauxam: rgb(228,213,213);
-$fontcandung: 'Roboto', sans-serif;
-$positionbtnwidth: 200px;
 
-@mixin demo_mixin () {
+@mixin reset_pad-mar () {
     margin: 0;
 	padding: 0;
 }
 
+%reset-pad-mar {
+	margin: 0;
+	padding: 0;
+}
+
 html {
-	@include demo_mixin;
+	@include reset_pad-mar;
+	// @extend %reset-pad-mar;
 	font-family: $fontcandung;
 	box-sizing: inherit;
 	text-transform: uppercase;
@@ -131,7 +137,8 @@ a {
 }
 
 body {
-	@include demo_mixin;
+	@include reset_pad-mar;
+	// @extend %reset-pad-mar;
 	overflow-x: hidden;
 }
 
@@ -165,7 +172,8 @@ img {
 	position: relative;
 	display: flex;
 	align-items: flex-start;
-	@include demo_mixin;
+	@include reset_pad-mar;
+	// @extend %reset-pad-mar;
 	overflow: hidden;
 	max-height: 665px;
 }
@@ -313,7 +321,8 @@ footer {
 	background-color: $mautrang;
 	display: flex;
 	position: relative;
-	@include demo_mixin;
+	@include reset_pad-mar;
+	// @extend %reset-pad-mar;
 	.contact {
 		position: absolute;
 		display: flex;
