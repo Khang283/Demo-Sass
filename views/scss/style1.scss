@@ -1,0 +1,16 @@
+$mauhong : pink;
+$maudo : red;
+$mauxanh: blue;
+$size20: 20px;
+$size30: 30px;
+$size40: 40px;
+
+@mixin demo {
+    color: $mauhong;
+    font-size: $size20;
+}
+
+@mixin demo2 ($x, $y) {
+    color: $y;
+    font-size: $x;
+}
