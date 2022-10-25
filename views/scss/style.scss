@@ -24,9 +24,9 @@
 }
 
 .demo {
-	@include demo;
+	@include ChangeToPink;
 }
 
 .demo2 {
-	@include demo2($size40, $mauhong);
+	@include ChangeSizeAndColor($size40, $mauhong);
 }

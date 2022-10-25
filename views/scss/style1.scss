@@ -5,12 +5,12 @@ $size20: 20px;
 $size30: 30px;
 $size40: 40px;
 
-@mixin demo {
+@mixin ChangeToPink {
     color: $mauhong;
     font-size: $size20;
 }
 
-@mixin demo2 ($x, $y) {
+@mixin ChangeSizeAndColor ($x, $y) {
     color: $y;
     font-size: $x;
 }
